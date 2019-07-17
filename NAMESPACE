@@ -1,0 +1,16 @@
+
+#importFrom(utils, head, read.table, write.csv, write.table)
+
+import(dplyr, lubridate, ggplot2, likert)
+
+export(
+    print.columns,
+    combine.all,
+    explain,
+    find.dataset,
+    make.table,
+    make.table2,
+    order.responses
+)
+
+
