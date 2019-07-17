@@ -81,7 +81,7 @@ explain('respondents')
 
 ## Usage
 find.dataset('book.id')
-find.dataset('age.respondent')
+find.dataset('age.resp')
 find.dataset('wrong.column.name')
 
 
@@ -132,7 +132,7 @@ print.columns()
 
 # don't forget to put parentheses around the variable name!
 make.table2(table.of = 'age.resp', split = 'gender.resp')
-make.table2(table.of = 'literariness.read', split='gender.author')
+make.table2(table.of = 'literariness.read', split = 'gender.author')
 
 # Note that you can only provide an argument to the 'split' variable that has less than 31 unique 
 # values, to avoid uninterpretable outputs:
@@ -177,6 +177,14 @@ str(dat.reviews)
 # to create a data frame with ordered factor levels of the book ratings:
 dat.ratings = order.responses('bookratings')
 str(dat.ratings)
+
+
+# likert excluded so far
+# see here: https://github.com/jbryer/likert
+
+
+
+
 
 
 }

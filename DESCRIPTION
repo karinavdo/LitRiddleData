@@ -7,7 +7,7 @@ Author: Maciej Eder, Joris van Zundert, Karina van Dalen-Oskam, Saskia Lensink
 Maintainer: Maciej Eder <maciejeder@gmail.com>
 URL: http://literaryquality.huygens.knaw.nl/
 Depends: R (>= 2.14)
-Imports: dplyr, lubridate, ggplot2, likert
+Imports: dplyr, ggplot2
 Suggests: stylo, mallet, wordcloud,
     knitr,
     rmarkdown

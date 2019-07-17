@@ -1,7 +1,7 @@
 
 #importFrom(utils, head, read.table, write.csv, write.table)
 
-import(dplyr, lubridate, ggplot2, likert)
+import(dplyr, ggplot2)
 
 export(
     print.columns,
