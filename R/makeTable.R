@@ -4,7 +4,7 @@
 
 # make a table of frequency counts for one variable, and plot a histogram of the results.
 
-make.table <- function(table.of = ..., 
+make.table <- function(table.of = NULL, 
                        plot = TRUE, 
                        xlab = table.of, 
                        ylab = "count", 
@@ -39,16 +39,16 @@ make.table <- function(table.of = ...,
     }
   
     # some visuals
-    if(exists('table.x') & plot == TRUE){
+    if(exists("table.x") & plot == TRUE){
     
-        g = ggplot(dat.x, aes(x=dat.x[,1]))
-        g = g + geom_bar(colour=barcolor, fill=barfill)
+        g = ggplot(dat.x, aes(x = dat.x[, 1]))
+        g = g + geom_bar(colour = barcolor, fill = barfill)
         g = g + xlab(xlab) + ylab(ylab) + ggtitle(title)
         plot(g)
     
         return(table.x)
     
-    } else if(exists('table.x')){
+    } else if(exists("table.x")){
         return(table.x)
     } 
 }

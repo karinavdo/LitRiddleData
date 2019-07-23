@@ -1,17 +1,17 @@
-\name{reviews}
-\alias{reviews}
+\name{books}
+\alias{books}
 \docType{data}
 
 \title{
-Reviewers' scores
+Measurements of 401 novels.
 }
 
 \description{
-Reviewers' scores from the survey called The National Reader Survey (2013).
+Measurements (including word frequencies) of 401 novels in Dutch.
 }
 
 \usage{
-data(reviews)
+data(books)
 }
 
 \details{
@@ -23,11 +23,10 @@ The dataset is a part of The Riddle of Literary Quality Project.
 }
 
 \examples{
-data(reviews)
+data(books)
 
-print(reviews)
-summary(reviews)
-
+print(books)
+summary(books)
 }
 
 \keyword{datasets}

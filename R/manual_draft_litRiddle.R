@@ -14,7 +14,7 @@ dummy.function = function() {
 
 # Use this function to print the names of all available columns
 # Don't forget the parentheses at the end of the function!
-print.columns()
+get.columns()
 
 
 
@@ -36,12 +36,12 @@ print.columns()
 
 # combine and load all data from the books, respondents and reviews into 
 # a new dataframe (tibble format)
-dat = combine.all(load.freq.table=FALSE)
+dat = combine.all(load.freq.table = FALSE)
 
 # combine and load all data from the books, respondents and reviews into 
 # a new dataframe (tibble format), and additionally also load the frequency
 # table of all word 1grams of the corpus used. 
-dat = combine.all(load.freq.table=TRUE)
+dat = combine.all(load.freq.table = TRUE)
 
 
 
@@ -91,7 +91,7 @@ find.dataset('wrong.column.name')
 
 
 # -------------------------------------- # 
-#  	MAKE TABLE 	                         # 
+#  	MAKE TABLE 	                 # 
 # -------------------------------------- #
 
 # make a table of frequency counts for one variable, and plot a histogram of the results.
@@ -100,7 +100,7 @@ find.dataset('wrong.column.name')
 ## Usage 
 
 # print column names to see which variables you can choose from:
-print.columns()
+get.columns()
 
 # don't forget to put parentheses around the variable name!
 make.table(table.of = 'age.resp')
@@ -128,7 +128,7 @@ make.table(table.of = 'age.resp', xlab = 'age respondent', ylab = 'number of peo
 ## Usage
 
 # print column names to see which variables you can choose from:
-print.columns()
+get.columns()
 
 # don't forget to put parentheses around the variable name!
 make.table2(table.of = 'age.resp', split = 'gender.resp')

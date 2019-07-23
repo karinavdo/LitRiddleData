@@ -1,0 +1,321 @@
+---
+title: "Literary Quality of Dutch Novels with litRiddle"
+author:
+- Joris van Zundert
+- Maciej Eder
+- Karina van Dalen-Oskam
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{The Riddle of Literary Quality}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+
+
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+
+
+
+
+
+# Introduction
+
+This vignette explains basic functionalities of the package `litRiddle`, a part of the Riddle of Literary Quality project.
+
+The package contains the data of a reader survey about fiction in Dutch, a description of the novels the readers rated, and the results of stylistic measurements of the novels. The package also contains functions to combine, analyze, and visualize these data.
+
+See: [http://literaryquality.huygens.knaw.nl/](http://literaryquality.huygens.knaw.nl/) for further details.
+
+If you use 'litRiddle' in your academic publications, please consider citing the following paper: 
+
+**Eder, M.**, **van Zundert, J.**, **van Dalen-Oskam, K.**. Exploring conventions of literariness using R. (forthcoming).
+
+
+# Installation
+
+Install the package directly from the GitHub repository:
+
+``` {r eval = FALSE}
+library(devtools)
+install_github("karinavdo/LitRiddleData", build_vignettes = TRUE)
+```
+
+
+
+
+
+# Usage
+
+
+First, one has to activate the package so that its functions become visible to the user:
+
+
+``` {r warning = FALSE}
+library(litRiddle)
+```
+
+
+
+
+
+
+## The dataset
+
+To activate the dataset, type one of the following lines (or all of them):
+
+
+``` {r}
+data(books)
+data(respondents)
+data(reviews)
+```
+
+From now on, the dataset, divided into three data tables, is visible for the user. Plase note that the functions discussed below do not need the dataset to be activated (they take care of it themselves), therefore you don't have to remember about this step if you plan to analyze the data using the functions from the package.
+
+Time to explore some of the data tables. This generic funcion will list all the data points from the table `books`:
+
+``` {r eval = FALSE}
+books
+```
+
+Quite a lot of stuff dumped on the screen, right? It's usually a better idea to select one portion of information at a time, usually one variable or one observation. We assume here that the user has some basic knowledge about R, and particularly s/he knows how to access values in vectors and tables (matrices). To get the titles of the books scored in the survey (or, say, the first 10 titles), one might type:
+
+
+``` {r}
+books$title[1:10]
+```
+
+Well, but how do I know that the name of the particular variable I want to get is `title`, rather than anything else? There exists a function that lists all the variables from the three data tables.
+
+
+
+
+
+
+## Print column names
+
+The function that creates a list of all the column names from all three datasets is named `get.columns()` and needs no arguments to be run. What it means is that you simply type the following code, remembering about the parentheses at the end of the function:
+
+``` {r}
+get.columns()
+```
+
+Not bad indeed. However, how can I know what `s.4a2` stands for? 
+
+
+
+
+
+
+
+## Explain variables
+
+Function that lists an short explanation of what the different column names refer to and what their levels consist of is called `explain()`. To work properly, this function needs an _argument_ to be passed, which basically mean that the user has to specify which dataset s/he is interested in. The options are as follows:
+
+``` {r}
+explain("books")
+explain("reviews")
+explain("respondents")
+```
+
+
+
+
+
+
+
+
+## Combine all data tables
+
+The dataset provided by the package
+
+Function to combine all information of the survey, reviews, and books into one big dataframe. The user can specify whether or not s/he want to also load the freqTable with the frequency counts of the word n-grams of the books.
+
+Combine and load all data from the books, respondents and reviews into a new dataframe (tibble format)
+
+``` {r}
+dat = combine.all(load.freq.table = FALSE)
+```
+
+Combine and load all data from the books, respondents and reviews into a new dataframe (tibble format), and additionally also load the frequency table of all word 1grams of the corpus used. 
+
+``` {r}
+dat = combine.all(load.freq.table = TRUE)
+```
+
+
+
+
+
+
+
+
+## Find dataset
+
+Return the name of the dataset where a column can be found.
+
+
+``` {r}
+find.dataset("book.id")
+find.dataset("age.resp")
+```
+
+It's useful to combine it with the already-discussed function `get.columns()`.
+
+
+
+
+
+## Make table (and plot it!)
+
+
+Make a table of frequency counts for one variable, and plot a histogram of the results. Not sure which variable you want to plot? Invoke th above-discussed function `get.columns()` once more, to see which variables you can choose from:
+
+``` {r eval = FALSE}
+get.columns()
+```
+
+Now the fun stuff:
+
+``` {r}
+make.table(table.of = 'age.resp')
+```
+
+You can also adjust the x label, y label, title, and colors:
+
+``` {r}
+make.table(table.of = 'age.resp', xlab = 'age respondent', ylab = 'number of people', 
+           title = 'Distribution of respondent age', barcolor = 'red', barfill = 'white')
+```
+
+           
+
+
+
+## Make table of X split by Y
+
+
+
+``` {r}
+make.table2(table.of = 'age.resp', split = 'gender.resp')
+```
+
+``` {r}
+make.table2(table.of = 'literariness.read', split = 'gender.author')
+```
+
+Note that you can only provide an argument to the 'split' variable that has less than 31 unique values, to avoid uninterpretable outputs. E.g., consider the following code:
+
+``` {r}
+make.table2(table.of = 'age.resp', split = 'zipcode') 
+```
+
+You can also adjust the x label, y label, title, and colors:
+
+``` {r}
+make.table2(table.of = 'age.resp', split = 'gender.resp', xlab = 'age respondent', 
+            ylab = 'number of people', 
+            barcolor = 'purple', barfill = 'yellow')
+```
+
+``` {r}
+make.table2(table.of = 'literariness.read', split = 'gender.author', 
+            xlab = 'Overall literariness scores', 
+            ylab = 'number of people', barcolor = 'black', 
+            barfill = 'darkred')
+```
+
+
+
+## Order responses
+
+
+
+Function that transforms the survey responses into ordered factors. Use either "bookratings" or "readingbehavior" to specify which of the survey questions needs to be changed into ordered factors. (We assume here that the user knows what the ordered factors are, because otherwise this function will not seem very useful). Levels of `quality.read` and `quality.notread`: "very bad", "bad", "a bit bad", "neutral", "a bit good", "good", "very good", "NA". Levels `literariness.read` and `literariness.notread`: "absolutely not literary", "non-literary", "not very literary", "between literary and non-literary","a bit literary", "literary", "very literary", "NA". Levels statements 4/12: "completely disagree", "disagree", "neutral", "agree", "completely agree", "NA".
+
+To create a data frame with ordered factor levels of the questions on reading behavior
+
+``` {r}
+dat.reviews = order.responses('readingbehavior')
+str(dat.reviews)
+```
+
+To create a data frame with ordered factor levels of the book ratings:
+
+``` {r}
+dat.ratings = order.responses('bookratings')
+str(dat.ratings)
+```
+
+
+
+
+
+
+# Coming soon
+
+Next versions of the `litRiddle` package will support likert plots. Visit [https://github.com/jbryer/likert](https://github.com/jbryer/likert) to learn more about the general idea and the implementation in R.
+
+
+
+
+
+
+
+# Topic modeling
+
+[TBD]
+
+
+
+
+
+
+
+# Documentation
+
+Each function provided by the package has its own help page; the same applies to the datasets
+
+
+``` {r eval = FALSE}
+help(books)
+help(respondents)
+help(reviews)
+help(combine.all)
+help(explain)
+help(find.dataset)
+help(get.columns)
+help(make.table)
+help(make.table2)
+help(order.responses)
+```
+
+
+
+
+
+
+
+
+
+
+# Possible issues 
+
+* encoding [TBD]
+
+
+
+# References
+
+**van Dalen-Oskam, K.** (2015). Prehistory of The Riddle. ('The Riddle of Literary Quality: The search for conventions of literariness', transl. of: The Riddle of Literary Quality. Op zoek naar conventies van literariteit' and was published in: _Vooys: tijdschrift voor letteren_ **32** (2014), 3, p. 25-33.), [http://literaryquality.huygens.knaw.nl/?p=537]([http://literaryquality.huygens.knaw.nl/?p=537]).
+
+
+ 

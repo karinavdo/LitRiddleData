@@ -3,7 +3,8 @@
 ## ------------------------------------------------------- ##
 
 # function that creates a list of all the column names from all three datasets
-print.columns <- function( ){
+get.columns <- function() {
+
     # a hack to silence package warnings  
     data("books", package = "litRiddle", envir = environment()) 
     books <- get("books", envir = environment()) 
@@ -19,6 +20,7 @@ print.columns <- function( ){
     colnames.resp = colnames(respondents)
     colnames.reviews = colnames(reviews)
     columns = list(books = colnames.books, respondents = colnames.resp, reviews = colnames.reviews)
-    print(columns)
+    
+    return(columns)
 }
 

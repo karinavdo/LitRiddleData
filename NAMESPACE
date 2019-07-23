@@ -1,10 +1,10 @@
 
-#importFrom(utils, head, read.table, write.csv, write.table)
+importFrom(utils, data, str)
 
 import(dplyr, ggplot2)
 
 export(
-    print.columns,
+    get.columns,
     combine.all,
     explain,
     find.dataset,

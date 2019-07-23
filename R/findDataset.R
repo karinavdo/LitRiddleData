@@ -5,7 +5,7 @@
 
 # Return the name of the dataset where a column can be found.
 
-find.dataset = function(name = ...){
+find.dataset = function(name = NULL){
     
     # a hack to silence package warnings  
     data("books", package = "litRiddle", envir = environment()) 
@@ -29,7 +29,7 @@ find.dataset = function(name = ...){
     } else if(name %in% colnames(reviews)){
         print("reviews")
     } else {
-        stop("This is not a valid column name. Please type <print.columns()> to see which column names exist.")
+        stop("This is not a valid column name. Please type <get.columns()> to see which column names exist.")
     }
 
 }

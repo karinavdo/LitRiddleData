@@ -24,7 +24,15 @@ library(devtools)
 install_github("karinavdo/LitRiddleData", build_vignettes = TRUE)
 ```
 
+
 ## Usage
 
 There will be a vignette added to this package that will briefly guide the users through the functions of the package. So far, one is in the mercy of the generic `help()` function in R. 
+
+
+## General info
+
+**van Dalen-Oskam, K.** (2015) Prehistory of The Riddle. ('The Riddle of Literary Quality: The search for conventions of literariness', transl. of: The Riddle of Literary Quality. Op zoek naar conventies van literariteit' and was published in: _Vooys: tijdschrift voor letteren_ **32** (2014), 3, p. 25-33.), [http://literaryquality.huygens.knaw.nl/?p=537]([http://literaryquality.huygens.knaw.nl/?p=537]).
+
+
 

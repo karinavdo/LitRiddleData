@@ -5,7 +5,7 @@
 # function that transforms the survey responses into ordered factors
 
 
-order.responses <- function(bookratings.or.readingbehavior = ...){
+order.responses <- function(bookratings.or.readingbehavior = NULL){
 
     # a hack to silence package warnings  
     data("books", package = "litRiddle", envir = environment()) 
