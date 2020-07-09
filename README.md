@@ -33,7 +33,7 @@ There will be a vignette added to this package that will briefly guide the users
 ## General info
 
 **Corina Koolen, Karina van Dalen-Oskam, Andreas van Cranenburgh, Erica Nagelhout** (2020) Literary quality in the eye of the Dutch reader: The National Reader Survey.
-Poetics, available online 15 February 2020, https://doi.org/10.1016/j.poetic.2020.101439
+<i>Poetics</i>, available online 15 February 2020, https://doi.org/10.1016/j.poetic.2020.101439
 
 More publications can be found through https://literaryquality.huygens.knaw.nl/?page_id=588
 
