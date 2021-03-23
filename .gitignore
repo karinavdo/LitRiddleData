@@ -24,3 +24,6 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 inst/doc
+
+# Apple's Desktop Service Store files
+.DS_store
