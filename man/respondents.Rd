@@ -1,6 +1,7 @@
 \name{respondents}
 \alias{respondents}
 \docType{data}
+
 \title{
 Respondents' Answers
 }
