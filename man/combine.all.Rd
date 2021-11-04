@@ -28,7 +28,7 @@ A data frame combining the two (optionally three) datasets: \code{books}, \code{
 }
 
 \references{
-\url{http://literaryquality.huygens.knaw.nl/} 
+\url{https://literaryquality.huygens.knaw.nl/} 
 }
 
 \author{

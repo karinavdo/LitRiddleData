@@ -30,10 +30,10 @@ Maciej Eder, Joris van Zundert, Karina van Dalen-Oskam, Saskia Lensink
 }
 
 \references{
-Information about the package can be found at \url{http://literaryquality.huygens.knaw.nl/}
+Information about the package can be found at \url{https://literaryquality.huygens.knaw.nl/}
 
 Karina van Dalen-Oskam. (2015) Prehistory of The Riddle. ('The Riddle of Literary Quality: The search for conventions of literariness', transl. of: The Riddle of Literary Quality. Op zoek naar conventies van literariteit' and was published in: Vooys: tijdschrift voor letteren 32 (2014), 3, p. 25-33.)
-\url{http://literaryquality.huygens.knaw.nl/?p=537#more-537}
+\url{https://literaryquality.huygens.knaw.nl/?p=537#more-537}
 
 }
 

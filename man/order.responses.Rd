@@ -28,7 +28,7 @@ A data table containing relevant variables.
 }
 
 \references{
-\url{http://literaryquality.huygens.knaw.nl/} 
+\url{https://literaryquality.huygens.knaw.nl/} 
 }
 
 \author{

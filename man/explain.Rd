@@ -12,7 +12,7 @@ Function that lists a short explanation of what the different column names refer
 }
 
 \usage{
-explain(dataset = NULL)
+explain(dataset = "")
 }
 
 \arguments{
@@ -28,7 +28,7 @@ A character vector being a description of the dataset.
 }
 
 \references{
-\url{http://literaryquality.huygens.knaw.nl/} 
+\url{https://literaryquality.huygens.knaw.nl/} 
 }
 
 \author{

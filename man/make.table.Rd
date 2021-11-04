@@ -40,7 +40,7 @@ A character vector containing one chosen variable, optionally followed by a plot
 }
 
 \references{
-\url{http://literaryquality.huygens.knaw.nl/} 
+\url{https://literaryquality.huygens.knaw.nl/} 
 }
 
 \author{

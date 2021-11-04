@@ -22,6 +22,18 @@ data(reviews)
 The dataset is a part of The Riddle of Literary Quality Project.
 }
 
+\author{
+Karina van Dalen-Oskam, Joris van Zundert
+}
+
+\seealso{
+\code{\link{get.columns}}, \code{\link{explain}}, \code{\link{books}}, 
+\code{\link{frequencies}}, \code{\link{respondents}}
+}
+
+
+
+
 \examples{
 data(reviews)
 

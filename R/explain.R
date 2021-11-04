@@ -26,7 +26,7 @@ the information they contain:
                       Contains 13 categories --- to see which, type
                       'levels(books$riddle.code' in the terminal;
 7. translated         'yes' if the book has been translated, 'no' if not;
-8. gender.author      The gender of the author;
+8. gender.author      The gender of the author: Female, Male, Unknown/Multiple;
 9. origin.author      The country of origin of the author. Note that short
                       country codes have been used instead of the full
                       country names;
@@ -40,11 +40,20 @@ the information they contain:
 13. first.print       Year in which the first print appeared;
 14. publisher         Publishers of the books;
 15. english.title     Title of the book in English;
-16. wc                Word count, or total number of words (tokens) used 
+16. word.count        Word count, or total number of words (tokens) used 
                       in a book;
-17. types             Total number of unique words (types) used in a book;
-18. lex.div           Lexical Diversity, or type-token ratio, which gives an
-                      indication of how diverse the word use in a book is.
+17. type.count        Total number of unique words (types) used in a book;
+
+18. sentence.length.mean   Average sentence lengh in a book (in words);
+19. sentence.length.variance   Standard deviation of the sentence lenght;
+20. paragraph.count   Total number of paragraphs in a book;
+21. sentence.count    Total number of sentences in a book;
+22. paragraph.length.mean   Average paragraph length in a book (in words); 
+23. raw.TTR           Lexical diversity, or type-token ratio, which gives an
+                      indication of how diverse the word use in a book is;
+24. sampled.TTR      Unlike the raw type-token ratio, the sampled TTR is 
+                     significantly more resistant to text size, and thus
+                     it should be preferred over the raw TTR. 
 \n")
     
   } else if(dataset == "reviews"){
@@ -71,6 +80,10 @@ what information they contain:
                           'not literary at all' and 7 meaning 'very literary';
 7. motivations            Written explanations of why a respondent gave a
                           a certain rating to a certain book.
+8. book.read              1 or 0: 1 indicates that the respondent read 
+                          the book, 0 indicates the respondent did not 
+                          read the book but had an opinion about 
+                          the literary quality of the book.
 \n")
     
   } else if(dataset == "respondents"){
@@ -82,7 +95,7 @@ Here follows a list with the different column names and an explanation of
 what information they contain:
 
 1. respondent.id      Unique number for each respondent of the survey;
-2. gender.resp        Gender of the respondent;
+2. gender.resp        Gender of the respondent: Female, Male, NA;
 3. age.resp           Age of the respondent;
 4. zipcode            Zipcode of the respondent;
 5. education          Education level, containing 8 levels (see which

@@ -42,7 +42,7 @@ A character vector containing one chosen variable, optionally followed by a plot
 }
 
 \references{
-\url{http://literaryquality.huygens.knaw.nl/} 
+\url{https://literaryquality.huygens.knaw.nl/} 
 }
 
 \author{
@@ -51,21 +51,26 @@ Saskia Lensink, Maciej Eder
 
 
 \seealso{
-\code{\link{make.table2}}, \code{\link{get.columns}}
+\code{\link{make.table}}, \code{\link{get.columns}}
 }
 
 \examples{
+
 make.table2(table.of = "age.resp", split = "gender.resp")
 make.table2(table.of = "literariness.read", split = "gender.author")
 
-# Note that you can only provide an argument to the 'split' variable that has less than 31 unique 
-# values, to avoid uninterpretable outputs:
+\dontrun{
+
+# Note that you can only provide an argument to the 'split' variable 
+# that has less than 31 unique values, to avoid uninterpretable outputs:
 make.table2(table.of = "age.resp", split = "zipcode") 
 
 # You can also adjust the x label, y label, title, and colors.
-make.table2(table.of = "age.resp", split = "gender.resp", xlab = "age respondent", ylab = "number of people", 
-            barcolor = "purple", barfill = "yellow")
-make.table2(table.of = "literariness.read", split = "gender.author", xlab = "Overall literariness scores", 
-            ylab = "number of people", barcolor = "black", barfill = "darkred")
+make.table2(table.of = "age.resp", split = "gender.resp", 
+  xlab = "age respondent", ylab = "number of people", 
+  barcolor = "purple", barfill = "yellow")
+make.table2(table.of = "literariness.read", split = "gender.author", 
+  xlab = "Overall literariness scores", ylab = "number of people", 
+  barcolor = "black", barfill = "darkred")
 }
-
+}

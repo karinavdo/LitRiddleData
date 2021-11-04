@@ -25,7 +25,7 @@ A list with three elements: \code{books}, \code{respondents}, and \code{reviews}
 }
 
 \references{
-\url{http://literaryquality.huygens.knaw.nl/} 
+\url{https://literaryquality.huygens.knaw.nl/} 
 }
 
 \author{

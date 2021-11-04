@@ -1,17 +1,17 @@
-\name{respondents}
-\alias{respondents}
+\name{frequencies}
+\alias{frequencies}
 \docType{data}
 
 \title{
-Respondents' Answers
+Word frequencies (5000 most frequent words) of 401 novels.
 }
 
 \description{
-The information about the reviewers that participated in the survey called The National Reader Survey (2013).
+Word frequencies (5000 most frequent words) of 401 novels in Dutch.
 }
 
 \usage{
-data(respondents)
+data(frequencies)
 }
 
 \details{
@@ -22,21 +22,23 @@ data(respondents)
 The dataset is a part of The Riddle of Literary Quality Project.
 }
 
+
 \author{
 Karina van Dalen-Oskam, Joris van Zundert
 }
 
 \seealso{
 \code{\link{get.columns}}, \code{\link{explain}}, \code{\link{books}}, 
-\code{\link{reviews}}, \code{\link{frequencies}}
+\code{\link{reviews}}, \code{\link{respondents}}
 }
 
 
 
 \examples{
-data(respondents)
+data(frequencies)
 
-print(respondents)
-summary(respondents)
+print(frequencies)
+summary(frequencies)
 }
+
 \keyword{datasets}
