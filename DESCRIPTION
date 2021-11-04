@@ -3,11 +3,12 @@ Type: Package
 Title: R Package to Research the Riddle of Literary Quality
 Version: 0.4.0
 Date: 2021-11-3
-Authors@R: c(person("Saskia", "Lensink", role = "aut"),
-             person("Maciej", "Eder", role = c("aut", "cre"), email = "maciejeder@gmail.com"),
+Authors@R: c(person("Maciej", "Eder", role = c("aut", "cre"), 
+                    email = "maciejeder@gmail.com"),
+             person("Karina", "van Dalen-Oskam", role = "aut"),
              person("Joris", "van Zundert", role = "aut"),
-             person("Karina", "van Dalen-Oskam", role = "aut"))
-Author: Saskia Lensink [aut], Maciej Eder [aut, cre], Joris van Zundert [aut], Karina van Dalen-Oskam [aut]
+             person("Saskia", "Lensink", role = "aut"))
+Author: Maciej Eder [aut, cre], Karina van Dalen-Oskam [aut], Joris van Zundert [aut], Saskia Lensink [aut]
 Maintainer: Maciej Eder <maciejeder@gmail.com>
 URL: https://literaryquality.huygens.knaw.nl/
 Depends: R (>= 3.5.0)

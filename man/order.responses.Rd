@@ -16,11 +16,7 @@ order.responses(bookratings.or.readingbehavior = NULL)
 }
 
 \arguments{
-  \item{bookratings.or.readingbehavior}{Use either "bookratings" or "readingbehavior" to specify which of the survey questions needs to be changed into ordered factors.}
-}
-
-\details{
-.................................
+  \item{bookratings.or.readingbehavior}{Use either \code{"bookratings"} or \code{"readingbehavior"} to specify which of the survey questions needs to be changed into ordered factors.}
 }
 
 \value{

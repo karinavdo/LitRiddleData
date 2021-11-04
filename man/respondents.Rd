@@ -15,7 +15,11 @@ data(respondents)
 }
 
 \details{
-.................................................
+This is a dataframe containing numerical, ordinal and textual data
+about the 13541 reviewers that scored 401 novels. To see which 
+variables are provided, type \code{get.columns()}. To learn more 
+about what  the column names really mean, 
+type \code{explain("respondents")}.
 }
 
 \source{

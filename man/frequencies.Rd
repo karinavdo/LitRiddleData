@@ -15,7 +15,14 @@ data(frequencies)
 }
 
 \details{
-.................................................
+This is a dataframe containing numerical values for word frequencies
+of the 5000 most frequent words (in a descending order of frequency)
+of 401 literary novels in Dutch. The table contains relative frequencies,
+meaning that the original word occurencies from a book were divided 
+by the total number of words of the book in question. The measurments
+were obtained using the R package \code{stylo}, and were later rounded 
+to the 5th digit. To learn more 
+about the novels themselves, type \code{help(books)}.
 }
 
 \source{
@@ -24,7 +31,7 @@ The dataset is a part of The Riddle of Literary Quality Project.
 
 
 \author{
-Karina van Dalen-Oskam, Joris van Zundert
+Karina van Dalen-Oskam, Maciej Eder
 }
 
 \seealso{
@@ -39,6 +46,20 @@ data(frequencies)
 
 print(frequencies)
 summary(frequencies)
+
+\dontrun{
+
+    # the dataset is meant to be used in stylometric analyses,
+    # here's a typical research scenario via the package 'stylo':
+	library(litRiddle)
+	data(frequencies)
+	library(stylo)
+	stylo(frequencies = frequencies)
+
+}
+
+
+
 }
 
 \keyword{datasets}

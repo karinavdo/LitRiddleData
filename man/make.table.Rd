@@ -32,7 +32,9 @@ make.table(table.of = NULL,
 }
 
 \details{
-.............................................. 
+A basic way to show the distribution of an indicated variable from 
+the \code{litRiddle} package. It provides the values, but also 
+a simple histrogram. 
 }
 
 \value{
@@ -55,7 +57,8 @@ Saskia Lensink, Maciej Eder
 \examples{
 make.table(table.of = "age.resp")
 
-make.table(table.of = "age.resp", xlab = "age respondent", ylab = "number of people", 
-           title = "Distribution of respondent age", barcolor = "red", barfill = "white")
+make.table(table.of = "age.resp", xlab = "age respondent", 
+  ylab = "number of people", title = "Distribution of respondent age",
+  barcolor = "red", barfill = "white")
 }
 

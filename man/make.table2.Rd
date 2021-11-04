@@ -34,7 +34,10 @@ make.table2(table.of = NULL,
 }
 
 \details{
-.............................................. 
+Unlike \code{\link{make.table}}, this function provides a comparison
+of two variables at a time, or to be more precise: a distribution of 
+an indicated variable when subdivided into two or more groups.
+The function provides the values themselves, but also a final histrogram. 
 }
 
 \value{

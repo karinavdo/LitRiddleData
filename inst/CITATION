@@ -1,0 +1,20 @@
+citHeader("To cite the package 'litRiddle' in publications use:")
+
+citEntry(entry="Article",
+         title = "The Riddle of Literary Quality. Op zoek naar conventies van literariteit",
+         author = personList(as.person("Karina van Dalen-Oskam")),
+         journal      = "Vooys: tijdschrift voor letteren",
+         year         = "2014",
+         volume       = "32",
+         number       = "3",
+         pages        = "25--33",
+         url          = "https://www.dbnl.org/tekst/_voo013201401_01/_voo013201401_01_0031.php",
+
+         textVersion =
+         paste("van Dalen-Oskam, K. (2014). ",
+               "The Riddle of Literary Quality. Op zoek naar conventies van literariteit. ",
+               "\"Vooys: tijdschrift voor letteren\", ",
+               "32(3): 25-33.",
+               sep = "")
+         )
+

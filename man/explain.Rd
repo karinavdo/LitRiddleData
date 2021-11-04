@@ -16,11 +16,14 @@ explain(dataset = "")
 }
 
 \arguments{
-  \item{dataset}{specify whether or not you want to add the \code{freqTable} with the frequency counts of the word n-grams of the books. Default is \code{FALSE}.}
+  \item{dataset}{specify whether or not you want to add the \code{freqTable}
+  with the frequency counts of the word n-grams of the books. Default is 
+  \code{FALSE}.}
 }
 
 \details{
-.............................................. 
+In the current version, the option \code{dataset = TRUE} is not fully
+implemented.
 }
 
 \value{

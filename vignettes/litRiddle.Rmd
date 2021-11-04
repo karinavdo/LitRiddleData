@@ -4,6 +4,7 @@ author:
 - Joris van Zundert
 - Maciej Eder
 - Karina van Dalen-Oskam
+- Saskia Lensink
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{The Riddle of Literary Quality}
@@ -36,14 +37,20 @@ See: [https://literaryquality.huygens.knaw.nl/](https://literaryquality.huygens.
 
 If you use 'litRiddle' in your academic publications, please consider citing the following paper: 
 
-**Eder, M.**, **van Zundert, J.**, **van Dalen-Oskam, K.**. Exploring conventions of literariness using R. (forthcoming).
+**Karina van Dalen-Oskam** (2014). The Riddle of Literary Quality. Op zoek naar conventies van literariteit. "Vooys: tijdschrift voor letteren" **32**(3): 25-33.
 
 
 # Installation
 
-Install the package directly from the GitHub repository:
+Install the package from the CRAN repository:
 
-``` {r eval = FALSE}
+``` R
+install.packages("litRiddle")
+```
+
+Alternatively, try installing it directly from the current GitHub repository:
+
+``` R
 library(devtools)
 install_github("karinavdo/LitRiddleData", build_vignettes = TRUE)
 ```
@@ -177,7 +184,7 @@ It's useful to combine it with the already-discussed function `get.columns()`.
 ## Make table (and plot it!)
 
 
-Make a table of frequency counts for one variable, and plot a histogram of the results. Not sure which variable you want to plot? Invoke th above-discussed function `get.columns()` once more, to see which variables you can choose from:
+Make a table of frequency counts for one variable, and plot a histogram of the results. Not sure which variable you want to plot? Invoke the above-discussed function `get.columns()` once more, to see which variables you can choose from:
 
 ``` {r eval = FALSE}
 get.columns()
@@ -192,11 +199,15 @@ make.table(table.of = 'age.resp')
 You can also adjust the x label, y label, title, and colors:
 
 ``` {r}
-make.table(table.of = 'age.resp', xlab = 'age respondent', ylab = 'number of people', 
-           title = 'Distribution of respondent age', barcolor = 'red', barfill = 'white')
+make.table(table.of = 'age.resp', xlab = 'age respondent', 
+           ylab = 'number of people', 
+           title = 'Distribution of respondent age', 
+           barcolor = 'red', barfill = 'white')
 ```
 
-           
+Note: please mind that in the above examples we used single quotes to indicate arguments (e.g. `xlab = 'age respondent'`), whereas at the beginning of the document, we used double quotes (`explain("books")`). We did it for a reason, namely we wanted to emphasize that the functions provided by the package `litRiddle` are fully compliant with the generic R syntax, which allows for using either single or double quotes to indicate the strings.
+
+
 
 
 
@@ -221,8 +232,8 @@ make.table2(table.of = 'age.resp', split = 'zipcode')
 You can also adjust the x label, y label, title, and colors:
 
 ``` {r}
-make.table2(table.of = 'age.resp', split = 'gender.resp', xlab = 'age respondent', 
-            ylab = 'number of people', 
+make.table2(table.of = 'age.resp', split = 'gender.resp', 
+            xlab = 'age respondent', ylab = 'number of people', 
             barcolor = 'purple', barfill = 'yellow')
 ```
 
@@ -241,7 +252,7 @@ make.table2(table.of = 'literariness.read', split = 'gender.author',
 
 Function that transforms the survey responses into ordered factors. Use either "bookratings" or "readingbehavior" to specify which of the survey questions needs to be changed into ordered factors. (We assume here that the user knows what the ordered factors are, because otherwise this function will not seem very useful). Levels of `quality.read` and `quality.notread`: "very bad", "bad", "a bit bad", "neutral", "a bit good", "good", "very good", "NA". Levels `literariness.read` and `literariness.notread`: "absolutely not literary", "non-literary", "not very literary", "between literary and non-literary","a bit literary", "literary", "very literary", "NA". Levels statements 4/12: "completely disagree", "disagree", "neutral", "agree", "completely agree", "NA".
 
-To create a data frame with ordered factor levels of the questions on reading behavior
+To create a data frame with ordered factor levels of the questions on reading behavior:
 
 ``` {r}
 dat.reviews = order.responses('readingbehavior')
@@ -260,7 +271,7 @@ str(dat.ratings)
 
 
 
-# Coming soon
+# Likert plots
 
 Next versions of the `litRiddle` package will support likert plots. Visit [https://github.com/jbryer/likert](https://github.com/jbryer/likert) to learn more about the general idea and the implementation in R.
 
@@ -272,7 +283,7 @@ Next versions of the `litRiddle` package will support likert plots. Visit [https
 
 # Topic modeling
 
-[TBD]
+Next versions of the `litRiddle` package will support topic modeling of the motivations indicated by the reviewers.
 
 
 
@@ -282,13 +293,14 @@ Next versions of the `litRiddle` package will support likert plots. Visit [https
 
 # Documentation
 
-Each function provided by the package has its own help page; the same applies to the datasets
+Each function provided by the package has its own help page; the same applies to the datasets:
 
 
 ``` {r eval = FALSE}
 help(books)
 help(respondents)
 help(reviews)
+help(frequencies)
 help(combine.all)
 help(explain)
 help(find.dataset)
@@ -296,11 +308,8 @@ help(get.columns)
 help(make.table)
 help(make.table2)
 help(order.responses)
+help(litRiddle) # for the general description of the package
 ```
-
-
-
-
 
 
 
@@ -309,7 +318,8 @@ help(order.responses)
 
 # Possible issues 
 
-* encoding [TBD]
+All the datasets use the UTF-8 encoding (also known as the Unicode). This should normally not cause any problems on MacOS and Linux machines, but Windows might be more tricky in this respect. We haven't experienced any inconveniences in our testing environment, but we cannot say the same about all the other machines.
+
 
 
 

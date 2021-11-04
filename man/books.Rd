@@ -3,7 +3,7 @@
 \docType{data}
 
 \title{
-Measurements of 401 novels.
+Measurements of 401 novels
 }
 
 \description{
@@ -15,7 +15,10 @@ data(books)
 }
 
 \details{
-.................................................
+This is a dataframe containing numerical, ordinal and textual data
+(as well as metadata) for 401 novels. To see which variables are 
+provided, type \code{get.columns()}. To learn more about what 
+the column names really mean, type \code{explain("books")}.
 }
 
 \source{

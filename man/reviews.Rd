@@ -15,7 +15,11 @@ data(reviews)
 }
 
 \details{
-.................................................
+This is a dataframe containing numerical, ordinal and textual data
+for thousands of individual reviews (and the reviewers' scores) 
+for 401 novels. To see which variables are provided, 
+type \code{get.columns()}. To learn more about what 
+the column names really mean, type \code{explain("reviews")}.
 }
 
 \source{
@@ -30,8 +34,6 @@ Karina van Dalen-Oskam, Joris van Zundert
 \code{\link{get.columns}}, \code{\link{explain}}, \code{\link{books}}, 
 \code{\link{frequencies}}, \code{\link{respondents}}
 }
-
-
 
 
 \examples{

@@ -19,12 +19,16 @@ combine.all(load.freq.table = FALSE)
 }
 
 \details{
-.............................. 
+In order to identify (possible) correlations between particular reviews
+(e.g. the scores by the reviewers) with metadata about the reviewers 
+themselves, it is usually required, or at least convenient, to combine
+two or more datasets into one large table. 
 }
 
 
 \value{
-A data frame combining the two (optionally three) datasets: \code{books}, \code{respondents}, and \code{reviews}.
+A data frame combining the two (optionally three) datasets: \code{books}, 
+\code{respondents}, and \code{reviews}.
 }
 
 \references{

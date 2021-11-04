@@ -16,7 +16,8 @@ get.columns()
 }
 
 \details{
-.............................. 
+This simple function works best when combined with \code{\link{explain}}, 
+which provides a detailed description of particular variables. Type \code{help(explain)} for more details. 
 }
 
 
@@ -34,7 +35,7 @@ Saskia Lensink, Maciej Eder
 
 
 \seealso{
-\code{\link{reviews}}, \code{\link{respondents}}, \code{\link{books}} 
+\code{\link{reviews}}, \code{\link{respondents}}, \code{\link{books}}, \code{\link{explain}} 
 }
 
 
