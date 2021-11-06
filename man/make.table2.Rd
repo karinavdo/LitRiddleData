@@ -24,13 +24,13 @@ make.table2(table.of = NULL,
 
 \arguments{
   \item{table.of}{which variable will be chosen? If not sure what variables are there, try typing \code{get.columns()} first.}
-  \item{split}{.................}
+  \item{split}{the variable that will be used to split the data: see the Examples section below for, well, some examples.}
   \item{plot}{do you want a plot to be plotted? Default: \code{TRUE}.}
   \item{xlab}{name of the X axis}
   \item{ylab}{name of the Y axis}
   \item{title}{title of the plot}
-  \item{barcolor}{color of the content}
-  \item{barfill}{........}
+  \item{barcolor}{outline color of the content}
+  \item{barfill}{color used to fill the bars}
 }
 
 \details{

@@ -2,7 +2,7 @@ Package: litRiddle
 Type: Package
 Title: R Package to Research the Riddle of Literary Quality
 Version: 0.4.0
-Date: 2021-11-3
+Date: 2021-11-6
 Authors@R: c(person("Maciej", "Eder", role = c("aut", "cre"), 
                     email = "maciejeder@gmail.com"),
              person("Karina", "van Dalen-Oskam", role = "aut"),

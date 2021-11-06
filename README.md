@@ -8,11 +8,11 @@ This is an R package being a part of the Riddle of Literary Quality project.
 
 The package contains the data of a reader survey about fiction in Dutch, a description of the novels the readers rated, and the results of stylistic measurements of the novels. The package also contains functions to combine, analyze, and visualize these data.
 
-See: [https://literaryquality.huygens.knaw.nl/](https://literaryquality.huygens.knaw.nl/) for further details.
+See: [https://literaryquality.huygens.knaw.nl/](https://literaryquality.huygens.knaw.nl/) for further details. Information in Dutch about the package can be found at [https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html](https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html).
 
-If you use 'litRiddle' in your academic publications, please consider citing the following paper: 
+If you use `litRiddle` in your academic publications, please consider citing the following reference: 
 
-**Karina van Dalen-Oskam** (2014). The Riddle of Literary Quality. Op zoek naar conventies van literariteit. "Vooys: tijdschrift voor letteren" **32**(3): 25-33.
+Karina van Dalen-Oskam (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
 
 
 
@@ -66,9 +66,13 @@ A concise description of the package's functionalities (in Dutch) is also provid
 
 ## General info
 
-**Corina Koolen, Karina van Dalen-Oskam, Andreas van Cranenburgh, Erica Nagelhout** (2020) Literary quality in the eye of the Dutch reader: The National Reader Survey.
-<i>Poetics</i>, available online 15 February 2020, https://doi.org/10.1016/j.poetic.2020.101439
+**Karina van Dalen-Oskam** (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
 
-More publications can be found through https://literaryquality.huygens.knaw.nl/?page_id=588
+**Karina van Dalen-Oskam (2015). Prehistory of The Riddle. ('The Riddle of Literary Quality: The search for conventions of literariness', transl. of: The Riddle of Literary Quality. Op zoek naar conventies van literariteit' and was published in: _Vooys: tijdschrift voor letteren_ **32** (2014), 3, p. 25-33.), [https://literaryquality.huygens.knaw.nl/?p=537](https://literaryquality.huygens.knaw.nl/?p=537).
+
+**Corina Koolen, Karina van Dalen-Oskam, Andreas van Cranenburgh, Erica Nagelhout** (2020). Literary quality in the eye of the Dutch reader: The National Reader Survey. _Poetics_ 79: 101439, [https://doi.org/10.1016/j.poetic.2020.101439](https://doi.org/10.1016/j.poetic.2020.101439).
+
+
+More publications can be found at [https://literaryquality.huygens.knaw.nl/?page_id=588](https://literaryquality.huygens.knaw.nl/?page_id=588)
 
 

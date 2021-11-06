@@ -15,7 +15,7 @@ data(books)
 }
 
 \details{
-This is a dataframe containing numerical, ordinal and textual data
+This is a dataframe containing numerical, ordinal and lexical data
 (as well as metadata) for 401 novels. To see which variables are 
 provided, type \code{get.columns()}. To learn more about what 
 the column names really mean, type \code{explain("books")}.

@@ -27,8 +27,8 @@ make.table(table.of = NULL,
   \item{xlab}{name of the X axis}
   \item{ylab}{name of the Y axis}
   \item{title}{title of the plot}
-  \item{barcolor}{color of the content}
-  \item{barfill}{........}
+  \item{barcolor}{outline color of the content}
+  \item{barfill}{color used to fill the bars}
 }
 
 \details{

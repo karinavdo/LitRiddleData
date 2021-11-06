@@ -33,11 +33,11 @@ This vignette explains basic functionalities of the package `litRiddle`, a part 
 
 The package contains the data of a reader survey about fiction in Dutch, a description of the novels the readers rated, and the results of stylistic measurements of the novels. The package also contains functions to combine, analyze, and visualize these data.
 
-See: [https://literaryquality.huygens.knaw.nl/](https://literaryquality.huygens.knaw.nl/) for further details.
+See: [https://literaryquality.huygens.knaw.nl/](https://literaryquality.huygens.knaw.nl/) for further details. Information in Dutch about the package can be found at [https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html](https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html).
 
-If you use 'litRiddle' in your academic publications, please consider citing the following paper: 
+If you use `litRiddle` in your academic publications, please consider citing the following reference: 
 
-**Karina van Dalen-Oskam** (2014). The Riddle of Literary Quality. Op zoek naar conventies van literariteit. "Vooys: tijdschrift voor letteren" **32**(3): 25-33.
+Karina van Dalen-Oskam (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
 
 
 # Installation
@@ -142,9 +142,7 @@ explain("respondents")
 
 ## Combine all data tables
 
-The dataset provided by the package
-
-Function to combine all information of the survey, reviews, and books into one big dataframe. The user can specify whether or not s/he want to also load the freqTable with the frequency counts of the word n-grams of the books.
+The the package provides a function to combine all information of the survey, reviews, and books into one big dataframe. The user can specify whether or not s/he wants to also load the freqTable with the frequency counts of the word n-grams of the books.
 
 Combine and load all data from the books, respondents and reviews into a new dataframe (tibble format)
 
@@ -249,8 +247,7 @@ make.table2(table.of = 'literariness.read', split = 'gender.author',
 ## Order responses
 
 
-
-Function that transforms the survey responses into ordered factors. Use either "bookratings" or "readingbehavior" to specify which of the survey questions needs to be changed into ordered factors. (We assume here that the user knows what the ordered factors are, because otherwise this function will not seem very useful). Levels of `quality.read` and `quality.notread`: "very bad", "bad", "a bit bad", "neutral", "a bit good", "good", "very good", "NA". Levels `literariness.read` and `literariness.notread`: "absolutely not literary", "non-literary", "not very literary", "between literary and non-literary","a bit literary", "literary", "very literary", "NA". Levels statements 4/12: "completely disagree", "disagree", "neutral", "agree", "completely agree", "NA".
+The orginal survey about Dutch fiction was designed to rank the responses using descriptive terms, e.g. "very bad", "neutral", "a bit good" etc. In order to conduct the analyses, the responses were then converted to numerical scales ranging from 1 to 7 (the questions about literariness and literary quality) or from 1 to 5 (the questions about the reviewer's reading patterns). However, if you want the responses converted back to their original form, invoke the function `order.responses()` that transforms the survey responses into ordered factors. Use either "bookratings" or "readingbehavior" to specify which of the survey questions needs to be changed into ordered factors. (We assume here that the user knows what the ordered factors are, because otherwise this function will not seem very useful). Levels of `quality.read` and `quality.notread`: "very bad", "bad", "a bit bad", "neutral", "a bit good", "good", "very good", "NA". Levels `literariness.read` and `literariness.notread`: "absolutely not literary", "non-literary", "not very literary", "between literary and non-literary","a bit literary", "literary", "very literary", "NA". Levels statements 4/12: "completely disagree", "disagree", "neutral", "agree", "completely agree", "NA".
 
 To create a data frame with ordered factor levels of the questions on reading behavior:
 
@@ -325,7 +322,11 @@ All the datasets use the UTF-8 encoding (also known as the Unicode). This should
 
 # References
 
-**van Dalen-Oskam, K.** (2015). Prehistory of The Riddle. ('The Riddle of Literary Quality: The search for conventions of literariness', transl. of: The Riddle of Literary Quality. Op zoek naar conventies van literariteit' and was published in: _Vooys: tijdschrift voor letteren_ **32** (2014), 3, p. 25-33.), [https://literaryquality.huygens.knaw.nl/?p=537](https://literaryquality.huygens.knaw.nl/?p=537).
 
+**Karina van Dalen-Oskam** (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
 
- 
+**Karina van Dalen-Oskam** (2014). Prehistory of The Riddle. ('The Riddle of Literary Quality: The search for conventions of literariness', transl. of: The Riddle of Literary Quality. Op zoek naar conventies van literariteit' and was published in: _Vooys: tijdschrift voor letteren_ **32**(3): 25-33.), [https://literaryquality.huygens.knaw.nl/?p=537](https://literaryquality.huygens.knaw.nl/?p=537).
+
+**Corina Koolen, Karina van Dalen-Oskam, Andreas van Cranenburgh, Erica Nagelhout** (2020). Literary quality in the eye of the Dutch reader: The National Reader Survey. _Poetics_ 79: 101439, [https://doi.org/10.1016/j.poetic.2020.101439](https://doi.org/10.1016/j.poetic.2020.101439).
+
+More publications from the project: see [https://literaryquality.huygens.knaw.nl/?page_id=588](https://literaryquality.huygens.knaw.nl/?page_id=588).
