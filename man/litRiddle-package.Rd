@@ -45,7 +45,7 @@ Karina van Dalen-Oskam (2021). Het raadsel literatuur. Is literaire kwaliteit me
 
 Karina van Dalen-Oskam (2015). The Riddle of Literary Quality. Op zoek naar conventies van literariteit. "Vooys: tijdschrift voor letteren" 32(3): 25-33, \url{https://literaryquality.huygens.knaw.nl/?p=537#more-537}
 
-Corina Koolen, Karina van Dalen-Oskam, Andreas van Cranenburgh, Erica Nagelhout (2020). Literary quality in the eye of the Dutch reader: The National Reader Survey. "Poetics" 79: 101439, \url{https://doi.org/10.1016/j.poetic.2020.101439}
+Corina Koolen, Karina van Dalen-Oskam, Andreas van Cranenburgh, Erica Nagelhout (2020). Literary quality in the eye of the Dutch reader: The National Reader Survey. "Poetics" 79: 101439, \doi{10.1016/j.poetic.2020.101439}
 
 More publications from the project: see \url{https://literaryquality.huygens.knaw.nl/?page_id=588}
 
