@@ -47,18 +47,6 @@ data(frequencies)
 print(frequencies)
 summary(frequencies)
 
-\dontrun{
-    # the dataset is meant to be used in stylometric analyses,
-    # here's a typical research scenario via the package 'stylo':
-	library(litRiddle)
-	data(frequencies)
-	library(stylo)
-	stylo(frequencies = frequencies)
-
-}
-
-
-
 }
 
 \keyword{datasets}

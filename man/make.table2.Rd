@@ -62,7 +62,7 @@ Saskia Lensink, Maciej Eder
 make.table2(table.of = "age.resp", split = "gender.resp")
 make.table2(table.of = "literariness.read", split = "gender.author")
 
-\dontrun{
+\donttest{
 
 # Note that you can only provide an argument to the 'split' variable 
 # that has less than 31 unique values, to avoid uninterpretable outputs:
