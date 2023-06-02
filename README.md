@@ -10,12 +10,11 @@ The package contains the data of a reader survey about fiction in Dutch, a descr
 
 See: [https://literaryquality.huygens.knaw.nl/](https://literaryquality.huygens.knaw.nl/) for further details. Information in Dutch about the package can be found at [https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html](https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html).
 
-If you use `litRiddle` in your academic publications, please consider citing the following reference: 
+If you use `litRiddle` in your academic publications, please consider citing the following references: 
 
 Karina van Dalen-Oskam (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
 
-
-
+Maciej Eder, Lensink, S., Van Zundert, J.J., and Van Dalen-Oskam, K.H. (2022). “Replicating The Riddle of Literary Quality: The LitRiddle Package for R.” In _Digital Humanities 2022 Conference Abstracts_, 636–637. Tokyo: The University of Tokyo / DH2022 Local Organizing Committee. https://dh2022.dhii.asia/abstracts/163.
 
 ## Installation
 
@@ -48,6 +47,8 @@ help(books)
 help(respondents)
 help(reviews)
 help(frequencies)
+help(motivations)
+help(motivations.text)
 help(combine.all)
 help(explain)
 help(find.dataset)
