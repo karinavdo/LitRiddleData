@@ -78,9 +78,7 @@ what information they contain:
 6. literariness.notread   Rating on how literary a respondent found a book that
                           s/he has not read. Scale from 1 - 7, with 1 meaning 
                           'not literary at all' and 7 meaning 'very literary';
-7. motivations            Written explanations of why a respondent gave a
-                          a certain rating to a certain book.
-8. book.read              1 or 0: 1 indicates that the respondent read 
+7. book.read              1 or 0: 1 indicates that the respondent read 
                           the book, 0 indicates the respondent did not 
                           read the book but had an opinion about 
                           the literary quality of the book.
@@ -154,9 +152,28 @@ what information they contain:
                       the survey.
 \n")
    
+  }  else if(dataset == "motivations"){
+    
+    cat("The 'motivations' dataset contains all motivations that people provided 
+about why they gave a certain book a specific rating. The motivations have been
+parsed to provide POS tag information
+        
+Here follows a list with the different column names and an explanation of
+what information they contain:
+
+1. motivation.id      Unique number for each motivation given;
+2. respondent.id      Unique number for each respondent;
+3. book.id            Unique number of the book the motication pertains to;
+4. paragraph.id       Number of paragraph within the motivation;
+5. sentence.id        Number of sentence within the paragraph;
+6. token              Token (in sentence order);
+7. lemma              Lemma of token;
+8. upos               POS tag of token;
+\n")
+
   } else {
     
-    stop("Please specify either 'books', 'respondents', or 'reviews',\n e.g. explain(\"books\").")
+    stop("Please specify either 'books', 'respondents', 'reviews', or 'motivations', \n e.g. explain(\"books\").")
     
   }
 

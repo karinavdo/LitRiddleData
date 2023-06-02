@@ -16,9 +16,10 @@ We will be grateful if you cite the package in your publications. To get the upd
 \details{
 The package litRiddle presents data generated in the project The Riddle of Literary Quality (2012--2019) in which a team of digital humanists aimed to find out if books that readers considered to be highly literary have a different set of values for stylistic features than books the same readers did not consider to be very literary.
 
-The package contains four data sets:
+The package contains five data sets:
   \enumerate{
     \item The reviews gathered from a hired representative panel of citizens of the Netherlands and in a large online survey called The National Reader Survey (2013). Type \cite{help(reviews)} for details.
+    \item The motivations that reviewers give for a subset or all of their ratings are provided as plain text and as POS tagged data. Type \cite{help(motivations)} for details.
     \item Data about the reviewers: age, gender, zipcode, average 
     number of books read per year etc. Type \cite{help(respondents)} 
     for details.
