@@ -1,8 +1,8 @@
 Package: litRiddle
 Type: Package
 Title: Dataset and Tools to Research the Riddle of Literary Quality
-Version: 1.0.0.9000
-Date: 2023-05-31
+Version: 1.0.0.9001
+Date: 2023-06-16
 Authors@R: c(person("Maciej", "Eder", role = c("aut", "cre"), 
                     email = "maciejeder@gmail.com"),
              person("Joris", "van Zundert", role = c("aut", "cre"),
