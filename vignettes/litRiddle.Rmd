@@ -35,7 +35,9 @@ The package contains the data of a reader survey about fiction in Dutch, a descr
 
 See: [https://literaryquality.huygens.knaw.nl/](https://literaryquality.huygens.knaw.nl/) for further details. Information in Dutch about the package can be found at [https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html](https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html).
 
-If you use `litRiddle` in your academic publications, please consider citing the following reference: 
+If you use `litRiddle` in your academic publications, please consider citing the following references: 
+
+Maciej Eder, Lensink, S., Van Zundert, J.J., and Van Dalen-Oskam, K.H. (2022). “Replicating The Riddle of Literary Quality: The LitRiddle Package for R.” In _Digital Humanities 2022 Conference Abstracts_, 636–637. Tokyo: The University of Tokyo / DH2022 Local Organizing Committee. https://dh2022.dhii.asia/abstracts/163.
 
 Karina van Dalen-Oskam (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
 
@@ -84,17 +86,18 @@ data(books)
 data(respondents)
 data(reviews)
 data(motivations)
+data(frequencies)
 ```
 
-From now on, the dataset, divided into four data tables, is visible for the user. Plase note that the functions discussed below do not need the dataset to be activated (they take care of it themselves), therefore you don't have to remember about this step if you plan to analyze the data using the functions from the package.
+From now on, the dataset, divided into four data tables, is visible for the user. Please note that the functions discussed below do not need the dataset to be activated (they take care of it themselves), therefore you don't have to remember about this step if you plan to analyze the data using the functions from the package.
 
-Time to explore some of the data tables. This generic funcion will list all the data points from the table `books`:
+Time to explore some of the data tables. This generic function will list all the data points from the table `books`:
 
 ``` {r eval = FALSE}
 books
 ```
 
-Quite a lot of stuff dumped on the screen, right? It's usually a better idea to select one portion of information at a time, usually one variable or one observation. We assume here that the user has some basic knowledge about R, and particularly s/he knows how to access values in vectors and tables (matrices). To get the titles of the books scored in the survey (or, say, the first 10 titles), one might type:
+This command will dumb quite a lot of stuff on the screen offering little insight or overview. It's usually a better idea to select one portion of information at a time, usually one variable or one observation. We assume here that the user has some basic knowledge about R, and particularly s/he knows how to access values in vectors and tables (matrices). To get the titles of the books scored in the survey (or, say, the first 10 titles), one might type:
 
 
 ``` {r}
@@ -132,6 +135,8 @@ Function that lists an short explanation of what the different column names refe
 explain("books")
 explain("reviews")
 explain("respondents")
+explain("motivations")
+explain("frequencies")
 ```
 
 
@@ -143,7 +148,7 @@ explain("respondents")
 
 ## Combine data from books, survey, reviews
 
-The the package provides a function to combine all information of the survey, reviews, and books into one big dataframe. The user can specify whether or not s/he wants to also load the freqTable with the frequency counts of the word n-grams of the books.
+The package provides a function to combine all information of the survey, reviews, and books into one big dataframe. The user can specify whether or not s/he wants to also load the freqTable with the frequency counts of the word n-grams of the books.
 
 Combine and load all data from the books, respondents and reviews into a new dataframe (tibble format)
 
@@ -268,10 +273,35 @@ str(dat.ratings)
 
 
 
+## frequencies
+
+The data frame `frequencies` contains numerical values for word frequencies of the 5000 most frequent words (in a descending order of frequency) of 401 literary novels in Dutch. The table contains relative frequencies, meaning that the original word occurencies from a book were divided  by the total number of words of the book in question. The measurments were obtained using the R package `stylo`, and were later rounded  to the 5th digit. To learn more about the novels themselves, type `help(books)`.
+
+The row names of the `frequencies` data frame contain the titles of the novels corresponding to the `title.short` column in the data frame `books`.
+
+``` {r}
+rownames( frequencies )[10:20]
+```
+
+Listing the relative frequency values for the novel _Weerzin_ by René Appel:
+
+``` {r}
+frequencies["Appel_Weerzin",][1:10]
+```
+
+And getting the book information:
+
+``` {r}
+books[books["short.title"]=="Appel_Weerzin",]
+```
+
+
+
+
 
 ## Motivations
 
-Version 1.0 of the package introducses a table `motivations`, containing the 200k+ lemmatized and POS tagged tokens making up the text of all motivations. This solution was chosen to not burden the table `reviews` with lots of text, XML, or JSON in additional columns, leading to potential problems with default memory constraints in R.
+Version 1.0 of the package introduces a table `motivations`, containing the 200k+ lemmatized and POS tagged tokens making up the text of all motivations. The data were tagged by Jesse de Does of the “Instituut voor de Nederlandse Taal” (INT) and manually corrected by Karina van Dalen-Oskam. We tried to guarantee the highest possible quality, but mistakes may still occur. The solution to add a token based table was chosen to not burden the table `reviews` with lots of text, XML, or JSON in additional columns, leading to potential problems with default memory constraints in R.
 
 To retrieve all tokens:
 
@@ -295,6 +325,8 @@ mots <- motivations.text()
 tibble( mots )
 ```
 
+**NOTE**: The dplyr package hides the `explain` function from the package litRiddle because it has its own `explain` function. To use litRiddle's explain function after `dplyr` is loaded, call it explicitly, like so: `litRiddle::explain( "books" )`.
+
 Gathering all motivations for, for instance, one book, requires some trivial merging. Let's see what people said about Binet's *HhhH*. For this we select the book information of the book with ID 46 and we left join (merge) that (`book.id` by `book.id`) with the table `mots` having all the motivations:
 
 ``` {r}
@@ -302,10 +334,35 @@ mots_hhhh <- merge( x=books[books["book.id"]==46,], y=mots, by="book.id", all.x=
 tibble( mots_hhhh )
 ```
 
-Hmm.. pretty wide table, select the `text` column to get an idea of what is being said:
+Hmm.. pretty wide table, select the `text` column to get an idea of what is being said, and print with the `n` parameter to see more rows:
 
 ``` {r}
-tibble( mots_hhhh[,"text"] )
+print( tibble( mots_hhhh[,"text"] ), n=40 )
+```
+
+
+
+### Gathering review information and motivations together
+
+If we also want to include review information, this requires another merge. Rather than trying to combine all data in one huge statement, it is usually easier to follow a step by step methog. First let's collect the motivations for _HhhH_. We will be more selective of columns. If you compare the following query with the `merge` statement above, you will find that we use only author and title from `books` and only repsondent ID and the motivational text from `mots`, while we use `book.id` from both to match for merging.
+
+``` {r}
+mots_hhhh <- merge( x=books[books["book.id"]==46, c("book.id", "author", "title")], y=mots[, c("book.id", "respondent.id", "text")], by="book.id", all.x=TRUE )
+tibble( mots_hhhh )
+```
+
+We now have a new view that we can again merge with the information in the `reviews` data:
+
+``` {R}
+tibble( merge( x=mots_hhhh, y=reviews, by=c("book.id", "respondent.id") , all.x=TRUE ) )
+```
+
+Note how we use a vector for `by` to ensure we match on book ID *and* respondent ID. If we would use only `book.id` we would get *all* score for that book by all respondents, but we want the score by these particular respondents that motivated their rating.
+
+And –being sceptical as we always should be about our strategies– let us just check that we didn't miss anything, and sample if indeed repsondent 1022 had only one rating for _HhhH_:
+
+``` {r}
+reviews[ reviews["respondent.id"]==1022 & reviews["book.id"]==46, ]
 ```
 
 
@@ -369,7 +426,7 @@ Now we need the full texts of all motivations, so we can find those three motiva
 mots_text <- motivations.text()
 ```
 
-To find the three motivations we merge the `boekx` table and the table with all the motivations, and we keep only those rows that pertain to the three motivation IDs. I.e. we merge on`by="motvation.id"` with `all.x=TRUE`, implying that we will keep all rows from `x` (i.e. the three motivations with the "boek" POS tagged as "X") and that we will drop all non related `y` (i.e. all those motivations that do not have those linguistically unknown "boek" mentions).
+To find the three motivations we merge the `boekx` table and the table with all the motivations, and we keep only those rows that pertain to the three motivation IDs. I.e. we merge on`by="motvation.id"` with `all.x=TRUE`, implying that we will keep all rows from `x` (i.e. the three motivations with the "boek" POS tagged as "X") and that we will drop all non-related `y` (i.e. all those motivations that do not have those linguistically unknown "boek" mentions).
 
 ```{r}
 boekx_mots_text <-  merge( x=boekx, y=mots_text, by="motivation.id", all.x=TRUE )
@@ -446,10 +503,11 @@ All the datasets use the UTF-8 encoding (also known as the Unicode). This should
 
 # References
 
+**Karina van Dalen-Oskam** (2023). _The Riddle of Literary Quality: A Computational Approach._ Amsterdam University Press.
 
 **Karina van Dalen-Oskam** (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
 
-**Karina van Dalen-Oskam** (2014). Prehistory of The Riddle. ('The Riddle of Literary Quality: The search for conventions of literariness', transl. of: The Riddle of Literary Quality. Op zoek naar conventies van literariteit' and was published in: _Vooys: tijdschrift voor letteren_ **32**(3): 25-33.), [https://literaryquality.huygens.knaw.nl/?p=537](https://literaryquality.huygens.knaw.nl/?p=537).
+**Maciej Eder, Saskia Lensink, Joris van Zundert,  Karina van Dalen-Oskam** (2022). “Replicating The Riddle of Literary Quality: The litRiddle package for R”, in: _Digital Humanities 2022 Conference Abstracts_. The University of Tokyo, Japan, 25–29 July 2022, p. 636-637 https://dh2022.dhii.asia/dh2022bookofabsts.pdf
 
 **Corina Koolen, Karina van Dalen-Oskam, Andreas van Cranenburgh, Erica Nagelhout** (2020). Literary quality in the eye of the Dutch reader: The National Reader Survey. _Poetics_ 79: 101439, [https://doi.org/10.1016/j.poetic.2020.101439](https://doi.org/10.1016/j.poetic.2020.101439).
 

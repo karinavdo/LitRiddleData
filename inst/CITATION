@@ -1,16 +1,50 @@
-citHeader("To cite the package 'litRiddle' in publications use:")
+citHeader("To cite the package 'litRiddle' in publications use either or both of:")
 
-citEntry(entry="Book",
-         title = "Het raadsel literatuur. Is literaire kwaliteit meetbaar?",
-         author       = personList(as.person("Karina van Dalen-Oskam")),
-         year         = "2021",
-         address      = "Amsterdam",
-         publisher    = "Amsterdam University Press",
+citEntry(entry="Misc",
+	title = "litRiddle: Dataset and Tools to Research the Riddle of Literary Quality",
+      author = c(
+            as.person("Maciej Eder"), 
+            as.person("Joris van Zundert"), 
+            as.person("Saskia Lensink"), 
+            as.person("Karina van Dalen-Oskam")
+      ),
+	copyright = "GPL3",
+	url = "https://cran.r-project.org/web/packages/litRiddle/index.html",
+	urldate = "2023-06-15",
+	publisher = "CRAN",
+	year = "2023",
+      textVersion = paste(
+            "Eder, M., Van Zundert, J., Lensink, S., and Van Dalen-Oskam, K. (2021). ", 
+            "litRiddle: Dataset and Tools to Research the Riddle of Literary Quality ",
+            "(1.0.0). CRAN. <https://cran.r-project.org/web/packages/litRiddle/index.html>"
+      )
+)
 
-         textVersion =
-         paste("van Dalen-Oskam, K. (2021). ",
-               "Het raadsel literatuur. Is literaire kwaliteit meetbaar? ",
-               "Amsterdam: Amsterdam University Press.",
-               sep = "")
-         )
-
+citEntry(entry="Misc",
+	title = "Replicating The Riddle of Literary Quality: The LitRiddle",
+      author = c(
+            as.person("Maciej Eder"), 
+            as.person("Saskia Lensink"),
+            as.person("Joris van Zundert"),  
+            as.person("Karina van Dalen-Oskam")
+      ),
+	address = "Tokyo",
+	title = "Replicating The Riddle of Literary Quality: The litRiddle package for R",
+	url = "https://dh2022.dhii.asia/abstracts/163",
+	language = "en",
+	urldate = "2022-01-10",
+	booktitle = "Digital Humanities 2022 Conference Abstracts",
+	publisher = "The University of Tokyo / DH2022 Local Organizing Committee",
+	author = "Eder, Maciej and Lensink, Saskia and Van Zundert, Joris J. and Van Dalen-Oskam, Karina",
+	month = "jul",
+	year = "2022",
+	note = "Presentation: https://confit.atlas.jp/guide/event/dh2022/subject/EP-01-163/advanced",
+	pages = "636--637",
+      textVersion = paste(
+            "Eder, Maciej, Saskia Lensink, Joris J. Van Zundert, and Karina Van Dalen-Oskam. 2022. ",
+            "“Replicating The Riddle of Literary Quality: The LitRiddle Package for R.” ",
+            "In Digital Humanities 2022 Conference Abstracts, 636--637. Tokyo: ",
+            "The University of Tokyo / DH2022 Local Organizing Committee. ",
+            "https://dh2022.dhii.asia/abstracts/163."
+      )
+)

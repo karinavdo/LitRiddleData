@@ -15,45 +15,50 @@ different books used in the survey.
 Here follows a list with the different column names and an explanation of
 the information they contain:
 
-1. short.title        A short name containing the author's name and 
-                      (a part of) the title;
-2. author             Last name and first name of the author of the book;
-3. title              Full title of the book;
-4. genre              Genre of the book. There are four different genres:
-                      a) Fiction; b) Romantic; c) Suspense; d) Other;
-5. book.id            Unique number to identify each book;
-6. riddle.code        More complete list of genres of the books. 
-                      Contains 13 categories --- to see which, type
-                      'levels(books$riddle.code' in the terminal;
-7. translated         'yes' if the book has been translated, 'no' if not;
-8. gender.author      The gender of the author: Female, Male, Unknown/Multiple;
-9. origin.author      The country of origin of the author. Note that short
-                      country codes have been used instead of the full
-                      country names;
-10. original.language The original language of the book. Note that short
-                      language codes have been used, instead of the full
-                      language names;
-11. inclusion.criterion   In what category a book has been placed, either
-                      a) bestseller; b) boekenweekgeschenk; c) library; or
-                      d) literair juweeltje;
-12. publication.date  Publication date of the book, using a YYYY-MM-DD format;
-13. first.print       Year in which the first print appeared;
-14. publisher         Publishers of the books;
-15. english.title     Title of the book in English;
-16. word.count        Word count, or total number of words (tokens) used 
-                      in a book;
-17. type.count        Total number of unique words (types) used in a book;
-
-18. sentence.length.mean   Average sentence lengh in a book (in words);
-19. sentence.length.variance   Standard deviation of the sentence lenght;
-20. paragraph.count   Total number of paragraphs in a book;
-21. sentence.count    Total number of sentences in a book;
-22. paragraph.length.mean   Average paragraph length in a book (in words); 
-23. raw.TTR           Lexical diversity, or type-token ratio, which gives an
-                      indication of how diverse the word use in a book is;
-24. sampled.TTR      Unlike the raw type-token ratio, the sampled TTR is 
-                     significantly more resistant to text size, and thus
-                     it should be preferred over the raw TTR. 
+1. short.title                A short name containing the author's name and 
+                              (a part of) the title;
+2. author                     Last name and first name of the author;
+3. title                      Full title of the book;
+4. title.english              Full title of the book in English;
+5. genre                      Genre of the book. 
+                              There are four different genres:
+                              a) Fiction; b) Romantic; c) Suspense; d) Other;
+6. book.id                    Unique number to identify each book;
+7. riddle.code                More complete list of genres of the books. 
+                              Contains 13 categories --- to see which, type
+                              'levels(books$riddle.code' in the terminal;
+8. riddle.code.english        Translation of code in column 7 in English;
+9. translated                 'yes' if the book has been translated,
+                              'no' if not;
+10. gender.author              The gender of the author: 
+                              Female, Male, Unknown/Multiple;
+11. origin.author             The country of origin of the author. 
+                              Note that short country codes have been used 
+                              instead of the full country names;
+12. original.language         The original language of the book. Note that short
+                              language codes have been used, instead of the full
+                              language names;
+13. inclusion.criterion       In what category a book has been placed, either
+                              a) bestseller; b) boekenweekgeschenk; 
+                              c) library; or d) literair juweeltje;
+14. publication.date          Publication date of the book, YYYY-MM-DD format;
+15. first.print               Year in which the first print appeared;
+16. publisher                 Publishers of the books;
+17. word.count                Word count, or total number of words (tokens)
+                              used in a book;
+18. type.count                Total number of unique words (types) used in book;
+19. sentence.length.mean      Average sentence length in a book (in words);
+20. sentence.length.variance  Standard deviation of the sentence lenght;
+21. paragraph.count           Total number of paragraphs in a book;
+22. sentence.count            Total number of sentences in a book;
+23. paragraph.length.mean     Average paragraph length in a book (in words); 
+24. raw.TTR                   Lexical diversity, or type-token ratio, which 
+                              gives an indication of how diverse the word use 
+                              in a book is;
+25. sampled.TTR               Unlike the raw type-token ratio, the sampled 
+                              TTR is significantly more resistant to text 
+                              size, and thus it should be preferred over the 
+                              raw TTR. 
 \n")
     
   } else if(dataset == "reviews"){
@@ -152,7 +157,7 @@ what information they contain:
                       the survey.
 \n")
    
-  }  else if(dataset == "motivations"){
+  } else if(dataset == "motivations"){
     
     cat("The 'motivations' dataset contains all motivations that people provided 
 about why they gave a certain book a specific rating. The motivations have been
@@ -169,6 +174,18 @@ what information they contain:
 6. token              Token (in sentence order);
 7. lemma              Lemma of token;
 8. upos               POS tag of token;
+\n")
+
+  } else if(dataset == "frequencies"){
+    
+    cat("This is a dataframe containing numerical values for word frequencies
+of the 5000 most frequent words (in a descending order of frequency)
+of 401 literary novels in Dutch. The table contains relative frequencies,
+meaning that the original word occurencies from a book were divided 
+by the total number of words of the book in question.
+
+The row names coincide with the column short.title from the data frame books.
+The column names list the 5000 most frequent words in the corpus. 
 \n")
 
   } else {
