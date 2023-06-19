@@ -48,7 +48,7 @@ the information they contain:
                               used in a book;
 18. type.count                Total number of unique words (types) used in book;
 19. sentence.length.mean      Average sentence length in a book (in words);
-20. sentence.length.variance  Standard deviation of the sentence lenght;
+20. sentence.length.variance  Standard deviation of the sentence length;
 21. paragraph.count           Total number of paragraphs in a book;
 22. sentence.count            Total number of sentences in a book;
 23. paragraph.length.mean     Average paragraph length in a book (in words); 
@@ -100,7 +100,7 @@ what information they contain:
 1. respondent.id      Unique number for each respondent of the survey;
 2. gender.resp        Gender of the respondent: Female, Male, NA;
 3. age.resp           Age of the respondent;
-4. zipcode            Zipcode of the respondent;
+4. zipcode            Zip code of the respondent;
 5. education          Education level, containing 8 levels (see which
                       levels by typing 'levels(respondents$education)'
                       in the terminal);
@@ -168,7 +168,7 @@ what information they contain:
 
 1. motivation.id      Unique number for each motivation given;
 2. respondent.id      Unique number for each respondent;
-3. book.id            Unique number of the book the motication pertains to;
+3. book.id            Unique number of the book the motivation pertains to;
 4. paragraph.id       Number of paragraph within the motivation;
 5. sentence.id        Number of sentence within the paragraph;
 6. token              Token (in sentence order);
@@ -181,7 +181,7 @@ what information they contain:
     cat("This is a dataframe containing numerical values for word frequencies
 of the 5000 most frequent words (in a descending order of frequency)
 of 401 literary novels in Dutch. The table contains relative frequencies,
-meaning that the original word occurencies from a book were divided 
+meaning that the original word occurrences from a book were divided 
 by the total number of words of the book in question.
 
 The row names coincide with the column short.title from the data frame books.
