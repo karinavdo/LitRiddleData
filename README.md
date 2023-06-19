@@ -71,7 +71,7 @@ A concise description of the package's functionalities (in Dutch) is also provid
 
 **Karina van Dalen-Oskam** (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
 
-**Maciej Eder, Saskia Lensink, Joris van Zundert, Karina van Dalen-Oskam* (2022). “Replicating The Riddle of Literary Quality: The litRiddle package for R”, in: _Digital Humanities 2022 Conference Abstracts._ The University of Tokyo, Japan, 25–29 July 2022, p. 636-637 https://dh2022.dhii.asia/dh2022bookofabsts.pdf
+**Maciej Eder, Saskia Lensink, Joris van Zundert, Karina van Dalen-Oskam** (2022). “Replicating The Riddle of Literary Quality: The litRiddle package for R”, in: _Digital Humanities 2022 Conference Abstracts._ The University of Tokyo, Japan, 25–29 July 2022, p. 636-637 https://dh2022.dhii.asia/dh2022bookofabsts.pdf
 
 **Corina Koolen, Karina van Dalen-Oskam, Andreas van Cranenburgh, Erica Nagelhout** (2020). Literary quality in the eye of the Dutch reader: The National Reader Survey. _Poetics_ 79: 101439, https://doi.org/10.1016/j.poetic.2020.101439.
 
