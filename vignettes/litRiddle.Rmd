@@ -1,8 +1,8 @@
 ---
 title: "Literary Quality of Dutch Novels with litRiddle"
 author:
-- Joris van Zundert
 - Maciej Eder
+- Joris van Zundert
 - Karina van Dalen-Oskam
 - Saskia Lensink
 output: rmarkdown::html_vignette
@@ -301,7 +301,9 @@ books[books["short.title"]=="Appel_Weerzin",]
 
 ## Motivations
 
-Version 1.0 of the package introduces a table `motivations`, containing the 200k+ lemmatized and POS tagged tokens making up the text of all motivations. The data were tagged by Jesse de Does of the “Instituut voor de Nederlandse Taal” (INT) and manually corrected by Karina van Dalen-Oskam. We tried to guarantee the highest possible quality, but mistakes may still occur. The solution to add a token based table was chosen to not burden the table `reviews` with lots of text, XML, or JSON in additional columns, leading to potential problems with default memory constraints in R.
+Version 1.0 of the package introduces a table `motivations`, containing the 200k+ lemmatized and POS tagged tokens making up the text of all motivations. The Dutch Language Institute (INT, Leiden) took care of POS-tagging the data. The tagging was manually corrected by Karina van Dalen-Oskam. We tried to guarantee the highest possible quality, but mistakes may still occur. 
+
+The solution to add a token based table was chosen to not burden the table `reviews` with lots of text, XML, or JSON in additional columns, leading to potential problems with default memory constraints in R.
 
 To retrieve all tokens:
 
@@ -325,7 +327,7 @@ mots <- motivations.text()
 tibble( mots )
 ```
 
-**NOTE**: The dplyr package hides the `explain` function from the package litRiddle because it has its own `explain` function. To use litRiddle's explain function after `dplyr` is loaded, call it explicitly, like so: `litRiddle::explain( "books" )`.
+<div style="background-color:rgba(250, 128, 114, 0.35);border:1px solid #A9A9A9;padding:5px;"><b>NOTE</b>: The dplyr package hides the <code style="background-color:rgba(255, 255, 255, 0.5);">explain</code> function from the package litRiddle because it has its own explain function. To use litRiddle's explain function after dplyr has been loaded, call it explicitly, like this: <code style="background-color:rgba(255, 255, 255, 0.5);">litRiddle::explain(&nbsp;"books"&nbsp;)</code>.</div>
 
 Gathering all motivations for, for instance, one book, requires some trivial merging. Let's see what people said about Binet's *HhhH*. For this we select the book information of the book with ID 46 and we left join (merge) that (`book.id` by `book.id`) with the table `mots` having all the motivations:
 
