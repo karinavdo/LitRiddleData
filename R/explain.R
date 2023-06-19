@@ -26,7 +26,7 @@ the information they contain:
 6. book.id                    Unique number to identify each book;
 7. riddle.code                More complete list of genres of the books. 
                               Contains 13 categories --- to see which, type
-                              'levels(books$riddle.code' in the terminal;
+                              `levels(books$riddle.code)` in the terminal;
 8. riddle.code.english        Translation of code in column 7 in English;
 9. translated                 'yes' if the book has been translated,
                               'no' if not;
