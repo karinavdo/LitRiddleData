@@ -1,6 +1,6 @@
 # LitRiddle 1.0.0:9001
 
-2023-06-16 Joris J. van Zundert <joris.van.zundert@gmail.com>
+2023-06-21 Joris J. van Zundert <joris.van.zundert@gmail.com>
 
 ## Changes breaking backwards compatibility
 
@@ -8,7 +8,7 @@ Data frame `books`: updated column order, naming, and types.
 
 ## Additions/changes
 
-Added column `riddle.code.english` to data frame `books`.  Updated README, NEWS, vignette, manuals. 
+Added column `riddle.code.english` to data frame `books`.  Updated README, NEWS, vignette, manuals, DATA_INFO. 
 Bumped development version indicator 1 up.
 
 

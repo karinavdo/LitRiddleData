@@ -35,11 +35,13 @@ The package contains the data of a reader survey about fiction in Dutch, a descr
 
 See: [https://literaryquality.huygens.knaw.nl/](https://literaryquality.huygens.knaw.nl/) for further details. Information in Dutch about the package can be found at [https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html](https://karinavdo.github.io/RaadselLiteratuur/02_07_data_en_R_package.html).
 
+These data are also available as individual csv files for persons wanting to work with the data in non R environments. See: https://github.com/karinavdo/RiddleData.
+
 If you use `litRiddle` in your academic publications, please consider citing the following references: 
 
 Maciej Eder, Lensink, S., Van Zundert, J.J., and Van Dalen-Oskam, K.H. (2022). “Replicating The Riddle of Literary Quality: The LitRiddle Package for R.” In _Digital Humanities 2022 Conference Abstracts_, 636–637. Tokyo: The University of Tokyo / DH2022 Local Organizing Committee. https://dh2022.dhii.asia/abstracts/163.
 
-Karina van Dalen-Oskam (2021). _Het raadsel literatuur. Is literaire kwaliteit meetbaar?_ Amsterdam University Press.
+**Karina van Dalen-Oskam** (2023). _The Riddle of Literary Quality: A Computational Approach._ Amsterdam University Press.
 
 
 # Installation
@@ -97,7 +99,7 @@ Time to explore some of the data tables. This generic function will list all the
 books
 ```
 
-This command will dumb quite a lot of stuff on the screen offering little insight or overview. It's usually a better idea to select one portion of information at a time, usually one variable or one observation. We assume here that the user has some basic knowledge about R, and particularly s/he knows how to access values in vectors and tables (matrices). To get the titles of the books scored in the survey (or, say, the first 10 titles), one might type:
+This command will dump quite a lot of stuff on the screen offering little insight or overview. It's usually a better idea to select one portion of information at a time, usually one variable or one observation. We assume here that the user has some basic knowledge about R, and particularly s/he knows how to access values in vectors and tables (matrices). To get the titles of the books scored in the survey (or, say, the first 10 titles), one might type:
 
 
 ``` {r}
@@ -275,7 +277,7 @@ str(dat.ratings)
 
 ## frequencies
 
-The data frame `frequencies` contains numerical values for word frequencies of the 5000 most frequent words (in a descending order of frequency) of 401 literary novels in Dutch. The table contains relative frequencies, meaning that the original word occurencies from a book were divided  by the total number of words of the book in question. The measurments were obtained using the R package `stylo`, and were later rounded  to the 5th digit. To learn more about the novels themselves, type `help(books)`.
+The data frame `frequencies` contains numerical values for word frequencies of the 5000 most frequent words (in a descending order of frequency) of 401 literary novels in Dutch. The table contains relative frequencies, meaning that the original word occurrences from a book were divided  by the total number of words of the book in question. The measurments were obtained using the R package `stylo`, and were later rounded  to the 5th digit. To learn more about the novels themselves, type `help(books)`.
 
 The row names of the `frequencies` data frame contain the titles of the novels corresponding to the `title.short` column in the data frame `books`.
 
