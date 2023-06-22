@@ -104,56 +104,57 @@ what information they contain:
 5. education          Education level, containing 8 levels (see which
                       levels by typing 'levels(respondents$education)'
                       in the terminal);
-6. books.per.year     Number of books read per year by each respondent;
-7. typically.reads    Typical genre of books that a respondent reads, 
+6. education.english  English translation of education levels.
+7. books.per.year     Number of books read per year by each respondent;
+8. typically.reads    Typical genre of books that a respondent reads, 
                       with three levels a) Fiction; b) Non-fiction;
                       c) both;
-8. how.literary       Answer to the question 'How literary a reader do 
+9. how.literary       Answer to the question 'How literary a reader do 
                       you consider yourself to be?', where respondents
                       could fill in a number from 1 - 7, with 1 meaning
                       'not literary at all' and 7 meaning 'very literary';
-9. s.4a1              Answer to the question: 'I like reading novels that 
+10. s.4a1              Answer to the question: 'I like reading novels that 
                       I can relate to my own life'. Scale from 1 - 5, with 
                       1 meaning 'completely disagree', and 5 meaning 
                       'completely agree';
-10. s.4a2             Answer to the question: 'The story of a novel is what 
+11. s.4a2             Answer to the question: 'The story of a novel is what 
                       matters most to me'. Scale from 1 - 5; 
-11. s.4a3             Answer to the question: 'The writing style in a book 
+12. s.4a3             Answer to the question: 'The writing style in a book 
                       is important to me'. Scale from 1 - 5;
-12. s.4a4             Answer to the question: 'I like searching for deeper 
+13. s.4a4             Answer to the question: 'I like searching for deeper 
                       layers in a novel'. Scale from 1 - 5;
-13. s.4a5             Answer to the question: 'I like reading literature'. 
+14. s.4a5             Answer to the question: 'I like reading literature'. 
                       Scale from 1 - 5;
-14. s.4a6             Answer to the question: 'I read novels to discover new 
+15. s.4a6             Answer to the question: 'I read novels to discover new 
                       worlds and unknown time periods'. Scale from 1 - 5;
-15. s.4a7             Answer to the question: 'I mostly read novels during my 
+16. s.4a7             Answer to the question: 'I mostly read novels during my 
                       vacation'. Scale from 1 - 5;
-16. s.4a8             Answer to the question: 'I usually read several novels at 
+17. s.4a8             Answer to the question: 'I usually read several novels at 
                       the same time'. Scale from 1 - 5;
-17. s.12b1            Answer to the question: 'I like novels based on real 
+18. s.12b1            Answer to the question: 'I like novels based on real 
                       events'. Scale from 1 - 5;
-18. s.12b2            Answer to the question: 'I like thinking about a novel's 
+19. s.12b2            Answer to the question: 'I like thinking about a novel's 
                       structure'. Scale from 1 - 5;
-19. s.12b3            Answer to the question: 'The writing style in a novel 
+20. s.12b3            Answer to the question: 'The writing style in a novel 
                       is of more importance to me than its story'. 
                       Scale from 1 - 5;  
-20. s.12b4            Answer to the question: 'I like to get carried away by 
+21. s.12b4            Answer to the question: 'I like to get carried away by 
                       a novel'. Scale from 1 - 5;
-21. s.12b5            Answer to the question: 'I like to pick my books from 
+22. s.12b5            Answer to the question: 'I like to pick my books from 
                       the top 10 list of best sold books'. Scale from 1 - 5;
-22. s.12b6            Answer to the question: 'I read novels to be challenged 
+23. s.12b6            Answer to the question: 'I read novels to be challenged 
                       intellectually'. Scale from 1 - 5;
-23. s.12b7            Answer to the question: 'I love novels that are easy 
+24. s.12b7            Answer to the question: 'I love novels that are easy 
                       to read'. Scale from 1 - 5;
-24. s.12b8            Answer to the question: 'In the evening, I prefer 
+25. s.12b8            Answer to the question: 'In the evening, I prefer 
                       to read books over watching TV'. Scale from 1 - 5;
-25. remarks.survey    Any additional remarks that respondents filled in
+26. remarks.survey    Any additional remarks that respondents filled in
                       at the end of the survey;
-26. date.time         Date and time of the moment a respondent filled in
+27. date.time         Date and time of the moment a respondent filled in
                       the survey, format in YYYY-MM-DD HH:MM:SS;
-27. week.nr           Number of week in which the respondent filled in 
+28. week.nr           Number of week in which the respondent filled in 
                       the survey;
-28. day               Day of the week in which the respondent filled in
+29. day               Day of the week in which the respondent filled in
                       the survey.
 \n")
    
