@@ -40,7 +40,7 @@ Saskia Lensink, Maciej Eder
 
 
 \seealso{
-\code{\link{reviews}}, \code{\link{respondents}}, \code{\ink{motivations}}, \code{\link{books}} 
+\code{\link{reviews}}, \code{\link{respondents}}, \code{\link{motivations}}, \code{\link{books}} 
 }
 
 \examples{

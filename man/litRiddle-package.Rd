@@ -42,7 +42,11 @@ Information in Dutch about the package can be found at \url{https://karinavdo.gi
 
 Information in English at \url{https://github.com/karinavdo/LitRiddleData/blob/master/README.md}
 
+Karina van Dalen-Oskam (2023). The Riddle of Literary Quality: A Computational Approach. Amsterdam University Press.
+
 Karina van Dalen-Oskam (2021). Het raadsel literatuur. Is literaire kwaliteit meetbaar? Amsterdam University Press.
+
+Maciej Eder, Saskia Lensink, Joris van Zundert, Karina van Dalen-Oskam (2022). Replicating The Riddle of Literary Quality: The litRiddle package for R, in: Digital Humanities 2022 Conference Abstracts. The University of Tokyo, Japan, 25–29 July 2022, p. 636-637 \url{https://dh2022.dhii.asia/dh2022bookofabsts.pdf}
 
 Karina van Dalen-Oskam (2015). The Riddle of Literary Quality. Op zoek naar conventies van literariteit. "Vooys: tijdschrift voor letteren" 32(3): 25-33, \url{https://literaryquality.huygens.knaw.nl/?p=537#more-537}
 
