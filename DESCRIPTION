@@ -1,16 +1,16 @@
 Package: litRiddle
 Type: Package
 Title: Dataset and Tools to Research the Riddle of Literary Quality
-Version: 1.0.0.9001
-Date: 2023-06-16
+Version: 1.0.0
+Date: 2023-07-17
 Authors@R: c(person("Maciej", "Eder", role = c("aut", "cre"), 
                     email = "maciejeder@gmail.com"),
-             person("Joris", "van Zundert", role = c("aut", "cre"),
+             person("Joris", "van Zundert", role = c("aut"),
                     email = "joris.van.zundert@gmail.com"),
              person("Karina", "van Dalen-Oskam", role = "aut"),
              person("Saskia", "Lensink", role = "aut"))
-Author: Maciej Eder [aut, cre], Joris van Zundert [aut, cre], Karina van Dalen-Oskam [aut], Saskia Lensink [aut]
-Maintainer: Maciej Eder <maciejeder@gmail.com>, Joris van Zundert <joris.van.zundert@gmail.com>
+Author: Maciej Eder [aut, cre], Joris van Zundert [aut], Karina van Dalen-Oskam [aut], Saskia Lensink [aut]
+Maintainer: Maciej Eder <maciejeder@gmail.com>
 URL: https://literaryquality.huygens.knaw.nl/
 Depends: R (>= 3.5.0)
 Imports: dplyr, ggplot2

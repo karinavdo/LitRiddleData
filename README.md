@@ -1,7 +1,7 @@
 # litRiddle: R package for exploring literary quality
 
 **Authors:** Maciej Eder, Karina van Dalen-Oskam, Joris van Zundert, Saskia Lensink<br/>
-**License:** [GPL-3](https://opensource.org/licenses/GPL-3.0)
+**License:** [GPL-3](https://opensource.org/license/gpl-3-0/)
 
 
 This is an R package being a part of the Riddle of Literary Quality project.
